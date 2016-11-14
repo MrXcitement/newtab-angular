@@ -82,20 +82,20 @@ define(['angularAMD', 'storage', 'moment-src'], function (angularAMD, storage, m
 
 		$scope.setWeather = function() {
 
-		    if (typeof storageFiles.temp === "undefined" || storageFiles.loc != user.location || LS.hasHourExpired(currentHour)) {
-	            
-				LS.getWeather(user.location).then(function(response) {
-						var temp = response.data.main.temp;
-						storageFiles.loc = user.location;
-						storageFiles.temp = (user.temperatureType == 0 ? 
-											Math.round(parseInt(temp) - parseInt(KELVIN), 2) + "°C" : 
-											Math.round(((parseInt(temp) - parseInt(KELVIN)) * 9/5) + 32, 2) + "°F");
-						$scope.updateCache();
-						$scope.weatherLoaded();
-				});
-		    } else {
-		    	$scope.weatherLoaded();
-		    }
+		   // if (typeof storageFiles.temp === "undefined" || storageFiles.loc != user.location || LS.hasHourExpired(currentHour)) {
+	       //     
+		   // 	LS.getWeather(user.location).then(function(response) {
+		   // 			var temp = response.data.main.temp;
+		   // 			storageFiles.loc = user.location;
+		   // 			storageFiles.temp = (user.temperatureType == 0 ? 
+		   // 								Math.round(parseInt(temp) - parseInt(KELVIN), 2) + "°C" : 
+		   // 								Math.round(((parseInt(temp) - parseInt(KELVIN)) * 9/5) + 32, 2) + "°F");
+		   // 			$scope.updateCache();
+		   // 			$scope.weatherLoaded();
+		   // 	});
+		   // } else {
+		   // 	$scope.weatherLoaded();
+		   // }
 		}
 		$scope.getStateOfDay = function(hours) {
 			if (hours >= 6 && hours < 12) 
