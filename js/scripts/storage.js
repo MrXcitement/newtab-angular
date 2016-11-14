@@ -43,13 +43,12 @@ define(['angularAMD'], function (angularAMD) {
 	    },
 	    getWeather : function(location)
 	    {
-	    // 	var promise = $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + location);
-	    // 	promise.then(function(response) {
-	    // 		return response.data;
-	    // 	});
+	    	var promise = $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + location);
+	    	promise.then(function(response) {
+	    		return response.data;
+	    	});
 	    	
-	    //	return promise;
-            return;
+	    	return promise;
 	    }
 	  };
 	});
