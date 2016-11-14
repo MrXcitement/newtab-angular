@@ -3,5 +3,5 @@
 	"name" : "MrXcitement",
 	"location" : "Littleton",
 	"temperatureType" : 1,
-	"dateformat" : "dddd DD/MM/YYYY"
+	"dateformat" : "dddd MM/DD/YYYY"
 }
