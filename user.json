@@ -3,5 +3,6 @@
 	"name" : "MrXcitement",
 	"location" : "Littleton",
 	"temperatureType" : 1,
-	"dateformat" : "dddd MM/DD/YYYY"
+	"dateformat" : "dddd MM/DD/YYYY",
+	"openweatherappid" : "ccc6bf967755455c437f986e0c4c5045"
 }
